@@ -1,0 +1,444 @@
+.b {
+    font-weight: bold;
+}
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    /* Ensure that overflow is hidden */
+    height: 90vh;
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    /* or '100%' if you want to stretch it */
+    min-height: 100%;
+    /* Fill the section */
+    min-width: 100%;
+    /* Fill the section */
+    object-fit: cover;
+    /* Make sure the video covers the area */
+    transform: translate(-50%, -50%);
+    /* Center the video */
+    z-index: 1;
+    /* Place the video behind other content */
+}
+
+.hero-text {
+    position: relative;
+    /* Set text position above the video */
+    z-index: 2;
+    /* Ensure text appears above the video */
+    color: white;
+    /* Change text color for better visibility */
+}
+
+.blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.349);
+    /* Semi-transparent black background */
+    backdrop-filter: blur(5px);
+    /* Apply blur effect */
+    z-index: 2;
+    /* Ensure blur is above the video but below the text */
+}
+
+.blur1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.349);
+    /* Semi-transparent black background */
+    backdrop-filter: blur(3px);
+    /* Apply blur effect */
+    z-index: 2;
+    /* Ensure blur is above the video but below the text */
+}
+
+.card {
+    height: 400px;
+    background-color: rgb(0, 0, 35);
+    margin: 10px;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    /* Lifts the card and enlarges it slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    /* Increases shadow for a deeper effect */
+}
+
+/* Optional: Add a slight hover effect to the card image */
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+    /* Slight zoom on image when hovered */
+}
+
+/* Optional: Add a glowing border effect */
+.card:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    /* Glowing border */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    /* Ensures the glow doesn't interfere with hover interactions */
+}
+
+.a1 {
+    background-image: url("https://149354933.v2.pressablecdn.com/wp-content/uploads/2024/10/328b7621-4fd0-4473-a52d-95cdf814d0df.jpeg");
+    background-size: cover;
+}
+
+.a2 {
+    background-image: url("https://preview.redd.it/first-poster-of-bhool-bhulaiyaa-3-v0-cd97gbdx84rd1.jpeg?width=640&crop=smart&auto=webp&s=ad71257aa69f76bab1be32ddc1e71b3f98001394");
+    background-size: cover;
+}
+
+.a3 {
+    background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Stree_2.jpg/220px-Stree_2.jpg");
+    background-size: cover;
+}
+
+.a4 {
+    background-image: url("https://cdn.culturecrossroads.ca/images/8a3f81e2-d566-4216-ba22-4fe7818437bd_2d11f26c7d182f5cbac92ad4eb9851b5_cc.webp");
+    background-size: cover;
+}
+
+.a5 {
+    background-image: url("https://i0.wp.com/boxofficeworldwide.com/wp-content/uploads/2024/09/d46630b3-9b68-4038-9bc7-70c03d05f76e-1.jpg?fit=1080%2C1350&ssl=1");
+    background-size: cover;
+}
+
+.a6 {
+    background-image: url("https://m.media-amazon.com/images/M/MV5BZDMyYWU4NzItZDY0MC00ODE2LTkyYTMtMzNkNDdmYmFhZDg0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg");
+    background-size: cover;
+}
+
+/* Concert */
+.a7 {
+    background-image: url('https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC/et00408378-jftsajssbf-portrait.jpg');
+    background-size: cover;
+}
+
+.a8 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC/et00415684-btarwjwadp-portrait.jpg");
+    background-size: cover;
+}
+
+.a81 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC/et00414575-rqlvulqcmg-portrait.jpg");
+    background-size: cover;
+}
+
+.a9 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC/et00409963-acptqnbsbd-portrait.jpg");
+    background-size: cover;
+}
+
+.a10 {
+    background-image: url('https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC/et00414526-kktyaxybtc-portrait.jpg');
+    background-size: cover;
+}
+
+.a11 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC/et00409320-yvdkheyvba-portrait.jpg");
+    background-size: cover;
+}
+
+/* Entertainment */
+
+.a12 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-TW9uLCAyMSBPY3Qgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00414194-jwwhcshnnv-portrait.jpg");
+    background-size: cover;
+}
+
+.a13 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyNiBPY3Q%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00411232-cwvqvaabgj-portrait.jpg");
+    background-size: cover;
+}
+
+.a14 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-TW9uLCAyMSBPY3Qgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00014607-masugdclxd-portrait.jpg");
+    background-size: cover;
+}
+
+.a15 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-TW9uLCAyMSBPY3Qgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00022344-ghuqhjfzxj-portrait.jpg");
+    background-size: cover;
+}
+
+.a16 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyMCBPY3Qgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00076445-nexgfmyvda-portrait.jpg");
+    background-size: cover;
+}
+
+.a17 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyMCBPY3Qgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00319920-rdsvpzczub-portrait.jpg");
+    background-size: cover;
+}
+
+/* Sports */
+.a18 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VHVlLCAzIERlYyBvbndhcmRz,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end:l-image,i-discovery-catalog@@icons@@bundle-icon-shadow-4x.png,lx-15,ly-15,w-50,l-end/et00414460-stcxwalnkg-portrait.jpg");
+    background-size: cover;
+}
+.a188 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-V2VkLCA0IERlYw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00414790-zfetrxawqd-portrait.jpg");
+    background-size: cover;
+}
+.a19 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyNyBPY3Q%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00409533-jtetreksuq-portrait.jpg");
+    background-size: cover;
+}
+
+.a20 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyNCBOb3Y%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00342538-cukdcazkrr-portrait.jpg");
+    background-size: cover;
+}
+
+.a21 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VHVlLCAzIERlYw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00414788-xdahacledf-portrait.jpg");
+    background-size: cover;
+}
+
+.a22 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAzIE5vdg%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00415956-lwryvlfaxu-portrait.jpg");
+    background-size: cover;
+}
+/* Standup */
+.a23 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyMCBPY3Qgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00327409-rrpyxnhhnt-portrait.jpg");
+    background-size: cover;
+}
+
+
+.a24 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyMCBPY3Q%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00145294-juwuwrebmt-portrait.jpg");
+    background-size: cover;
+}
+
+.a25 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAxNyBOb3Y%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00363549-zskntjnstx-portrait.jpg");
+    background-size: cover;
+}
+
+.a26 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyNiBPY3Q%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00368890-ttkzeqvuxg-portrait.jpg");
+    background-size: cover;
+}
+
+.a27 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-TW9uLCAxMSBOb3Ygb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00357779-mmefjkybvb-portrait.jpg");
+    background-size: cover;
+}
+
+.a28 {
+    background-image: url("https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-TW9uLCAyMSBPY3Qgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00357259-vnfsghlhnz-portrait.jpg");
+    background-size: cover;
+}
+
+
+/* General Styling */
+.schedule-table-section {
+    padding: 50px 0;
+}
+
+/* Filter Section Styling */
+.filter-sidebar {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.filter-sidebar:hover {
+    transform: scale(1.05);
+}
+
+.filter-sidebar h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.filter-options {
+    margin-bottom: 20px;
+}
+
+.custom-select {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 2px solid #2c3e50;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.custom-select:hover,
+.custom-select:focus {
+    border-color: #3498db;
+}
+
+.apply-btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.apply-btn:hover {
+    background-color: #2980b9;
+}
+
+.apply-btn:focus {
+    outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filter-sidebar {
+        margin-top: 30px;
+    }
+}
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1050; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 800%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+    backdrop-filter: blur(5px); /* Adds a blur to the background */
+}
+
+/* Modal Dialog */
+.modal-dialog {
+    max-width: 600px;
+    margin: 15% auto; /* Centering the modal */
+    position: relative;
+    transform: translateY(-50px);
+    transition: transform 0.3s ease-out;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border: none;
+}
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    background-color: #f8f9fa;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+/* Close Button */
+.modal-header .close {
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #000;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-header .close span {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.modal-header .close:hover {
+    color: #333;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    background-color: #fff;
+}
+
+/* Modal Footer */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    background-color: #f1f3f5;
+    border-top: 1px solid #e9ecef;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Button Styles */
+.modal-footer .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #5a6268;
+}

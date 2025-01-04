@@ -1,0 +1,110 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+  }
+  
+  h1, h2 {
+    font-weight: 600;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    background: #ff5a60;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  header h1 {
+    color: white;
+    font-size: 2.5rem;
+  }
+  
+  form {
+    background: white;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-section {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus, select:focus {
+    border-color: #ff5a60;
+    outline: none;
+  }
+  
+  button.submit-btn {
+    background-color: #ff5a60;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.submit-btn:hover {
+    background-color: #ff2f42;
+  }
+  
+  .confirmation {
+    background-color: #eaf9ea;
+    border: 1px solid #c7e5c7;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .confirmation h2 {
+    color: #2e7d32;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    form {
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  

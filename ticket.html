@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Ticket Booking</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2558/2558944.png" type="image/x-icon">
+  <link rel="stylesheet" href="ticket.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><i class="fas fa-ticket-alt"></i> Book Your Tickets</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <form id="booking-form">
+        <!-- Event Selection -->
+        <section class="form-section">
+            <label for="event">Choose an Event:</label>
+            <select id="event" name="event" required>
+              <optgroup label="Movies">
+                <option value="singham-again">Singham Again</option>
+                <option value="bhool-bhulaiya-3">Bhool Bhulaiya 3</option>
+                <option value="stree-2">Stree 2</option>
+                <option value="venom">Venom</option>
+                <option value="jigra">Jigra</option>
+                <option value="phulvanti">Phulvanti</option>
+              </optgroup>
+              <optgroup label="Concerts">
+                <option value="concert-a">Jubin Nautiyal</option>
+                <option value="concert-b">Shankar Mahadevan</option>
+                <option value="concert-b">Mahesh Kale</option>
+                <option value="concert-b">Kailash Kher</option>
+                <option value="concert-b">Krishna Das</option>
+              </optgroup>
+              <optgroup label="Stand-up Comedy">
+                <option value="standup-comedian-a">All Star Standup Comedy</option>
+                <option value="standup-comedian-b">Jo Bolta Hai Wahi Hota Hai</option>
+                <option value="standup-comedian-b">Bhumi Putra - Marathi Standup Comedy Show</option>
+                <option value="standup-comedian-b">Zakir Khan Live</option>
+                <option value="standup-comedian-b">Trigger Entertainment Standup</option>
+                <option value="standup-comedian-b">Oriole Entertainment Standup</option>
+              </optgroup>
+              <optgroup label="Entertainment">
+                <option value="entertainment-show-a">Tikuji-ni-wadi, Thane</option>
+                <option value="entertainment-show-b">Spooky Carnival at Jio World Drive</option>
+                <option value="entertainment-show-b">Masti Ki Baarish at Imagicaa</option>
+                <option value="entertainment-show-b">Bollywood Park Mumbai</option>
+                <option value="entertainment-show-b">Snow Kingdom Amchi Switzerland</option>
+                <option value="entertainment-show-b">Fountain of Joy at Dhirubhai Ambani Square</option>
+              </optgroup>
+              <optgroup label="Sports">
+                <option value="sports-event-a">Pro Kabaddi League Season 11</option>
+                <option value="sports-event-b">Pro Kabaddi: Telugu Titans vs UP Yoddhas</option>
+                <option value="sports-event-b">Mumbai City FC vs Odisha FC</option>
+                <option value="sports-event-b">Mumbai Green Marathon</option>
+                <option value="sports-event-b">Pro Kabaddi: Bengaluru Bulls vs Gujarat Titans</option>
+                <option value="sports-event-b">Chess Blitz Championship - Online for All Ages</option>
+              </optgroup>
+            </select>
+          </section>
+
+        <!-- Date and Time Selection -->
+        <section class="form-section">
+          <label for="date"><i class="fas fa-calendar-alt"></i> Date:</label>
+          <input type="date" id="date" name="date" required>
+        </section>
+
+        <section class="form-section">
+          <label for="time"><i class="fas fa-clock"></i> Time:</label>
+          <input type="time" id="time" name="time" required>
+        </section>
+
+        <!-- Seat Selection -->
+        <section class="form-section">
+          <label for="seats"><i class="fas fa-user-friends"></i> Number of Tickets:</label>
+          <input type="number" id="seats" name="seats" min="1" max="10" required>
+        </section>
+
+        <!-- Personal Information -->
+        <section class="form-section">
+          <label for="name"><i class="fas fa-user"></i> Full Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email"><i class="fas fa-envelope"></i> Email Address:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone"><i class="fas fa-phone-alt"></i> Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </section>
+
+        <!-- Submit Button -->
+        <section class="form-section">
+          <button type="submit" class="submit-btn"><i class="fas fa-check"></i> Book Now</button>
+        </section>
+      </form>
+
+      <!-- Confirmation Message -->
+      <div id="confirmation" class="confirmation hidden">
+        <h2>Thank you for booking!</h2>
+        <p>Your tickets have been reserved. We will send you a confirmation email shortly.</p>
+      <h4><b>Online Payment</b></h4>
+      <p> <b>Contact :</b> +91 XXXXXXXXXX</p>
+        <button class="btn btn-primary" onclick="window.location.href='/manup-master/index.html';">Home</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("booking-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+      
+        document.getElementById("booking-form").style.display = 'none';
+        const confirmation = document.getElementById("confirmation");
+        confirmation.classList.remove("hidden");
+        confirmation.style.opacity = 0;
+      
+        setTimeout(() => {
+          confirmation.style.opacity = 1;
+          confirmation.style.transition = "opacity 0.5s ease-in-out";
+        }, 100);
+      });
+      
+  </script>
+</body>
+</html>
